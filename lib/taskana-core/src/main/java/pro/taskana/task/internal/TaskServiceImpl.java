@@ -1180,6 +1180,7 @@ public class TaskServiceImpl implements TaskService {
   private Task claim(String taskId, boolean forceClaim)
       throws TaskNotFoundException, InvalidStateException, InvalidOwnerException,
           NotAuthorizedException {
+    LOGGER.info("myfirstcommit");
     String userId = CurrentUserContext.getUserid();
     LOGGER.debug(
         "entry to claim(id = {}, userId = {}, forceClaim = {})", taskId, userId, forceClaim);
